@@ -1,0 +1,27 @@
+.App {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr minmax(0, 8fr);
+      grid-template-columns: 2fr minmax(0, 8fr);
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "sidebar content";
+}
+
+#sidebar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: sidebar;
+}
+
+#content {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: content;
+  min-height: 70vh;
+}
+
+footer {
+  margin-top: auto;
+}
+/*# sourceMappingURL=App.css.map */

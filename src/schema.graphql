@@ -1,0 +1,11 @@
+schema {
+    query: Query
+}
+type Query {
+    visitors(limit: Int): [Visitor!]!
+}
+type Visitor {
+    datetime: String!
+    ip_address: String!
+    device: String!
+}

@@ -1,0 +1,19 @@
+.App {
+    display: grid;
+    grid-template-columns: 2fr minmax(0,8fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "sidebar content"
+}
+
+#sidebar {
+    grid-area: sidebar;
+}
+
+#content {
+    grid-area: content;
+    min-height: 70vh;
+}
+
+footer {
+    margin-top: auto;
+}

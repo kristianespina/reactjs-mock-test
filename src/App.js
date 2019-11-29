@@ -5,6 +5,8 @@ import { ApolloProvider } from '@apollo/react-hooks';
 
 
 import Listings from './components/Listings'
+import Sidebar from './components/Sidebar'
+
 import getClient from './API/client';
 
 const apolloClient = getClient();
@@ -26,7 +28,9 @@ function App() {
       </div>
     </header>
     <div className="App">
-      <section id="sidebar" className="has-background-black is-dark"></section>
+      <section id="sidebar" style={{marginTop: "2rem", marginLeft: "2rem"}}>
+        <Sidebar />
+      </section>
       <section id="content">
         <div className="container">
           <Listings />

@@ -1,3 +1,9 @@
+$base: '#f5f9fc';
+$dark: '#354052';
+$darker: '#2d3646';
+$teal: '#47bac1';
+$blue: '#5b7dff';
+
 .App {
     display: grid;
     grid-template-columns: 2fr minmax(0,8fr);

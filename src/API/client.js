@@ -9,12 +9,14 @@ import {
 } from "graphql-tools";
 
 import faker from "faker";
+import chance from "chance";
+
 const schemaString = `
 schema {
     query: Query
 }
 type Query {
-    visitors(offset: Int, limit: Int): [Visitor!]!
+    visitors(date: Int, offset: Int, limit: Int): [Visitor!]!
 }
 type Visitor {
     datetime: String!
@@ -27,8 +29,9 @@ const mocks = {
   Query: () => ({
     visitors: (root, args, context, info) => {
       // console.log(root, args, context, info);
+      const date = (args && args.date) || new Date();
       const offset = (args && args.offset) || 0;
-      const limit = (args && args.limit) || [4, 6];
+      const limit = (args && args.limit) || [10, 20];
       return new MockList(limit-offset);
     }
   }),
